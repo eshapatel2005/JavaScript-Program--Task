@@ -2,16 +2,21 @@
 
 
 
-// program to check if the number is even or odd
-// take input from the user
-const number = prompt("Enter a number: ");
+// program that checks if the number is positive, negative or zero
+// input from the user
+const number = parseInt(prompt("Enter a number: "));
 
-//check if the number is even
-if(number % 2 == 0) {
-    console.log("The number is even.");
+// check if number is greater than 0
+if (number > 0) {
+    console.log("The number is positive");
 }
 
-// if the number is odd
+// check if number is 0
+else if (number == 0) {
+  console.log("The number is zero");
+}
+
+// if number is less than 0
 else {
-    console.log("The number is odd.");
+     console.log("The number is negative");
 }
