@@ -2,21 +2,18 @@
 
 
 
-// program that checks if the number is positive, negative or zero
-// input from the user
-const number = parseInt(prompt("Enter a number: "));
+// program to check leap year
+function checkLeapYear(year) {
 
-// check if number is greater than 0
-if (number > 0) {
-    console.log("The number is positive");
+  //three conditions to find out the leap year
+  if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+      console.log(year + ' is a leap year');
+  } else {
+      console.log(year + ' is not a leap year');
+  }
 }
 
-// check if number is 0
-else if (number == 0) {
-  console.log("The number is zero");
-}
+// take input
+const year = prompt('Enter a year:');
 
-// if number is less than 0
-else {
-     console.log("The number is negative");
-}
+checkLeapYear(year);
