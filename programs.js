@@ -2,28 +2,26 @@
 
 
 
-// program to print prime numbers between the two numbers
+// program to find the factorial of a number
 
 // take input from the user
-const lowerNumber = parseInt(prompt('Enter lower number: '));
-const higherNumber = parseInt(prompt('Enter higher number: '));
+const number = parseInt(prompt('Enter a positive integer: '));
 
-console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
+// checking if number is negative
+if (number < 0) {
+    console.log('Error! Factorial for negative number does not exist.');
+}
 
-// looping from lowerNumber to higherNumber
-for (let i = lowerNumber; i <= higherNumber; i++) {
-    let flag = 0;
+// if number is 0
+else if (number === 0) {
+    console.log(`The factorial of ${number} is 1.`);
+}
 
-    // looping through 2 to user input number
-    for (let j = 2; j < i; j++) {
-        if (i % j == 0) {
-            flag = 1;
-            break;
-        }
+// if number is positive
+else {
+    let fact = 1;
+    for (i = 1; i <= number; i++) {
+        fact *= i;
     }
-
-    // if number greater than 1 and not divisible by other numbers
-    if (i > 1 && flag == 0) {
-        console.log(i);
-    }
+    console.log(`The factorial of ${number} is ${fact}.`);
 }
