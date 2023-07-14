@@ -2,26 +2,19 @@
 
 
 
-// program to check an Armstrong number of three digits
+//JavaScript program to swap two variables
 
-let sum = 0;
-const number = prompt('Enter a three-digit positive integer: ');
+//take input from the users
+let a = prompt('Enter the first variable: ');
+let b = prompt('Enter the second variable: ');
 
-// create a temporary variable
-let temp = number;
-while (temp > 0) {
-    // finding the one's digit
-    let remainder = temp % 10;
+//create a temporary variable
+let temp;
 
-    sum += remainder * remainder * remainder;
+//swap variables
+temp = a;
+a = b;
+b = temp;
 
-    // removing last digit from the number
-    temp = parseInt(temp / 10); // convert float into integer
-}
-// check the condition
-if (sum == number) {
-    console.log(`${number} is an Armstrong number`);
-}
-else {
-    console.log(`${number} is not an Armstrong number.`);
-}
+console.log(`The value of a after swapping: ${a}`);
+console.log(`The value of b after swapping: ${b}`);
