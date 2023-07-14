@@ -2,26 +2,17 @@
 
 
 
-// program to find the factorial of a number
+// program to generate a multiplication table
 
 // take input from the user
-const number = parseInt(prompt('Enter a positive integer: '));
+const number = parseInt(prompt('Enter an integer: '));
 
-// checking if number is negative
-if (number < 0) {
-    console.log('Error! Factorial for negative number does not exist.');
-}
+//creating a multiplication table
+for(let i = 1; i <= 10; i++) {
 
-// if number is 0
-else if (number === 0) {
-    console.log(`The factorial of ${number} is 1.`);
-}
+    // multiply i with number
+    const result = i * number;
 
-// if number is positive
-else {
-    let fact = 1;
-    for (i = 1; i <= number; i++) {
-        fact *= i;
-    }
-    console.log(`The factorial of ${number} is ${fact}.`);
+    // display the result
+    console.log(`${number} * ${i} = ${result}`);
 }
