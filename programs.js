@@ -2,8 +2,12 @@
 
 
 
-// take the input from the user
-let number = prompt('Enter the number: ');
+let baseValue = prompt('Enter the base of a triangle: ');
+let heightValue = prompt('Enter the height of a triangle: ');
 
-const result = Math.sqrt(number);
-console.log(`The square root of ${number} is ${result}`);
+// calculate the area
+let areaValue = (baseValue * heightValue) / 2;
+
+console.log(
+  `The area of the triangle is ${areaValue}`
+);
