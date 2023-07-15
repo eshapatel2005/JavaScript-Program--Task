@@ -2,19 +2,8 @@
 
 
 
-//JavaScript program to swap two variables
+// take the input from the user
+let number = prompt('Enter the number: ');
 
-//take input from the users
-let a = prompt('Enter the first variable: ');
-let b = prompt('Enter the second variable: ');
-
-//create a temporary variable
-let temp;
-
-//swap variables
-temp = a;
-a = b;
-b = temp;
-
-console.log(`The value of a after swapping: ${a}`);
-console.log(`The value of b after swapping: ${b}`);
+const result = Math.sqrt(number);
+console.log(`The square root of ${number} is ${result}`);
