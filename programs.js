@@ -1,7 +1,6 @@
 
 
 
-
 // program to solve quadratic equation
 let root1, root2;
 
