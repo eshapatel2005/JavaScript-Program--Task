@@ -2,24 +2,17 @@
 
 
 
-// program to find the largest among three numbers
+// program to generate fibonacci series up to n terms
 
 // take input from the user
-let num1 = parseFloat(prompt("Enter first number: "));
-let num2 = parseFloat(prompt("Enter second number: "));
-let num3 = parseFloat(prompt("Enter third number: "));
-let largest;
+const number = parseInt(prompt('Enter the number of terms: '));
+let n1 = 0, n2 = 1, nextTerm;
 
-// check the condition
-if(num1 >= num2 && num1 >= num3) {
-    largest = num1;
-}
-else if (num2 >= num1 && num2 >= num3) {
-    largest = num2;
-}
-else {
-    largest = num3;
-}
+console.log('Fibonacci Series:');
 
-// display the result
-console.log("The largest number is " + largest);
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
