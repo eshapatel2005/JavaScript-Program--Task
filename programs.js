@@ -2,13 +2,12 @@
 
 
 
-// taking kilometers input from the user
-let kilometers = prompt("Enter value in kilometers: ")
+// program to convert celsius to fahrenheit
+// ask the celsius value to the user 
+const celsius = prompt("Enter a celsius value: ");
 
-// conversion factor
-let factor = 0.621371
+// calculate fahrenheit
+const fahrenheit = (celsius * 1.8) + 32
 
-// calculate miles
-let miles = kilometers * factor
-
-console.log(`${kilometers} kilometers is equal to ${miles} miles.`);
+// display the result
+console.log(`${celsius} degree celsius is equal to ${fahrenheit} degree fahrenheit.`);
