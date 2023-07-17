@@ -2,23 +2,21 @@
 
 
 
-/* program to check whether the last digit of three
-numbers is same */
+// program to find the HCF or GCD of two integers
 
+let hcf;
 // take input
-let a = prompt('Enter a first integer: ');
-let b = prompt('Enter a second integer: ');
-let c = prompt('Enter a third integer: ');
+let number1 = prompt('Enter a first positive integer: ');
+let number2 = prompt('Enter a second positive integer: ');
 
-// find the last digit
-let result1 = a % 10;
-let result2 = b % 10;
-let result3 = c % 10;
+// looping from 1 to number1 and number2
+for (let i = 1; i <= number1 && i <= number2; i++) {
 
-// compare the last digits
-if(result1 == result2 && result1 == result3) {
-    console.log(`${a}, ${b} and ${c} have the same last digit.`);
+    // check if is factor of both integers
+    if( number1 % i == 0 && number2 % i == 0) {
+        hcf = i;
+    }
 }
-else {
-    console.log(`${a}, ${b} and ${c} have different last digit.`);
-}
+
+// display the hcf
+console.log(`HCF of ${number1} and ${number2} is ${hcf}.`);
