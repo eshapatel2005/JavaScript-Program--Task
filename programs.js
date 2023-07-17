@@ -2,17 +2,23 @@
 
 
 
-// program to display the sum of natural numbers
+/* program to check whether the last digit of three
+numbers is same */
 
-// take input from the user
-const number = parseInt(prompt('Enter a positive integer: '));
+// take input
+let a = prompt('Enter a first integer: ');
+let b = prompt('Enter a second integer: ');
+let c = prompt('Enter a third integer: ');
 
-let sum = 0;
+// find the last digit
+let result1 = a % 10;
+let result2 = b % 10;
+let result3 = c % 10;
 
-// looping from i = 1 to number
-// in each iteration, i is increased by 1
-for (let i = 1; i <= number; i++) {
-    sum += i;
+// compare the last digits
+if(result1 == result2 && result1 == result3) {
+    console.log(`${a}, ${b} and ${c} have the same last digit.`);
 }
-
-console.log('The sum of natural numbers:', sum);
+else {
+    console.log(`${a}, ${b} and ${c} have different last digit.`);
+}
