@@ -2,30 +2,17 @@
 
 
 
-// program for a simple calculator
+// program to display the sum of natural numbers
 
-// take the operator input
-const operator = prompt('Enter operator ( either +, -, * or / ): ');
+// take input from the user
+const number = parseInt(prompt('Enter a positive integer: '));
 
-// take the operand input
-const number1 = parseFloat(prompt('Enter first number: '));
-const number2 = parseFloat(prompt('Enter second number: '));
+let sum = 0;
 
-let result;
-
-// using if...else if... else
-if (operator == '+') {
-    result = number1 + number2;
-}
-else if (operator == '-') {
-    result = number1 - number2;
-}
-else if (operator == '*') {
-    result = number1 * number2;
-}
-else {
-    result = number1 / number2;
+// looping from i = 1 to number
+// in each iteration, i is increased by 1
+for (let i = 1; i <= number; i++) {
+    sum += i;
 }
 
-// display the result
-console.log(`${number1} ${operator} ${number2} = ${result}`);
+console.log('The sum of natural numbers:', sum);
