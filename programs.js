@@ -2,20 +2,18 @@
 
 
 
-// program to find the LCM of two integers
+// program to find the factors of an integer
 
 // take input
-let num1 = prompt('Enter a first positive integer: ');
-let num2 = prompt('Enter a second positive integer: ');
+let num = prompt('Enter a positive number: ');
 
-// higher number among number1 and number2 is stored in min
-let min = (num1 > num2) ? num1 : num2;
+console.log(`The factors of ${num} is:`);
 
-// while loop
-while (true) {
-    if (min % num1 == 0 && min % num2 == 0) {
-        console.log(`The LCM of ${num1} and ${num2} is ${min}`);
-        break;
+// looping through 1 to num
+for(let i = 1; i <= num; i++) {
+
+    // check if number is a factor
+    if(num % i == 0) {
+        console.log(i);
     }
-    min++;
 }
