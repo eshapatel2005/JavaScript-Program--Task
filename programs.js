@@ -2,18 +2,21 @@
 
 
 
-// program to find the factors of an integer
+// program to find the sum of natural numbers using recursion
 
-// take input
-let num = prompt('Enter a positive number: ');
-
-console.log(`The factors of ${num} is:`);
-
-// looping through 1 to num
-for(let i = 1; i <= num; i++) {
-
-    // check if number is a factor
-    if(num % i == 0) {
-        console.log(i);
+function sum(num) {
+    if(num > 0) {
+        return num + sum(num - 1);
     }
-}
+    else {
+        return num;
+    }
+ }
+
+// take input from the user
+let number = parseInt(prompt('Enter a positive integer: '));
+
+let result = sum(number);
+
+// display the result
+console.log(`The sum is ${result}`);
