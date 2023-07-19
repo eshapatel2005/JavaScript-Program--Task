@@ -1,26 +1,11 @@
 
 
+// program to find the ASCII value of a character
 
+// take input from the user
+let string = prompt('Enter a character: ');
 
+// convert into ASCII value
+let result = string.charCodeAt(0);
 
-
-// program to convert decimal to binary
-function convertToBinary(x) {
-    let bin = 0;
-    let rem, i = 1, step = 1;
-    while (x != 0) {
-        rem = x % 2;
-        console.log(
-            `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
-        );
-        x = parseInt(x / 2);
-        bin = bin + rem * i;
-        i = i * 10;
-    }
-    console.log(`Binary: ${bin}`);
-}
-
-// take input
-let number = prompt('Enter a decimal number: ');
-
-convertToBinary(number);
+console.log(`The ASCII value is: ${result}`);
