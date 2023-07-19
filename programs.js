@@ -4,28 +4,23 @@
 
 
 
-// program to find the factorial of a number
-function factorial(x) {
-
-    // if number is 0
-    if (x == 0) {
-        return 1;
+// program to convert decimal to binary
+function convertToBinary(x) {
+    let bin = 0;
+    let rem, i = 1, step = 1;
+    while (x != 0) {
+        rem = x % 2;
+        console.log(
+            `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
+        );
+        x = parseInt(x / 2);
+        bin = bin + rem * i;
+        i = i * 10;
     }
-
-    // if number is positive
-    else {
-        return x * factorial(x - 1);
-    }
+    console.log(`Binary: ${bin}`);
 }
 
-// take input from the user
-let num = prompt('Enter a positive number: ');
+// take input
+let number = prompt('Enter a decimal number: ');
 
-// calling factorial() if num is positive
-if (num >= 0) {
-    const result = factorial(num);
-    console.log(`The factorial of ${num} is ${result}`);
-}
-else {
-    console.log('Enter a positive number.');
-}
+convertToBinary(number);
