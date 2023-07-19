@@ -4,24 +4,28 @@
 
 
 
-// program to display fibonacci sequence using recursion
-function fibonacci(num) {
-    if(num < 2) {
-        return num;
+// program to find the factorial of a number
+function factorial(x) {
+
+    // if number is 0
+    if (x == 0) {
+        return 1;
     }
+
+    // if number is positive
     else {
-        return fibonacci(num-1) + fibonacci(num - 2);
+        return x * factorial(x - 1);
     }
 }
 
-// take nth term input from the user
-const nTerms = prompt('Enter the number of terms: ');
+// take input from the user
+let num = prompt('Enter a positive number: ');
 
-if(nTerms <=0) {
-    console.log('Enter a positive integer.');
+// calling factorial() if num is positive
+if (num >= 0) {
+    const result = factorial(num);
+    console.log(`The factorial of ${num} is ${result}`);
 }
 else {
-    for(let i = 0; i < nTerms; i++) {
-        console.log(fibonacci(i));
-    }
+    console.log('Enter a positive number.');
 }
