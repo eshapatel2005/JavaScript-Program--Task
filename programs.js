@@ -2,28 +2,20 @@
 
 
 
-// program to check if the string is palindrome or not
-
-function checkPalindrome(string) {
-
-    // find the length of a string
-    const len = string.length;
-
-    // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
-
-        // check if first and last string are same
-        if (string[i] !== string[len - 1 - i]) {
-            return 'It is not a palindrome';
-        }
-    }
-    return 'It is a palindrome';
-}
+// program to sort words in alphabetical order
 
 // take input
-let string = prompt('Enter a string: ');
+let string = prompt('Enter a sentence: ');
 
-// call the function
-let value = checkPalindrome(string);
+// converting to an array
+let words = string.split(' ');
 
-console.log(value);
+// sort the array elements
+words.sort();
+
+// display the sorted words
+console.log('The sorted words are:');
+
+for (const element of words) {
+  console.log(element);
+}
