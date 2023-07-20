@@ -2,12 +2,20 @@
 
 
 
-// program to replace a character of a string
+// program to reverse a string
 
-const string = 'Mr Red has a red house and a red car';
+function reverseString(str) {
 
-// replace the characters
-const newText = string.replace('red', 'blue');
+    // empty string
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
 
-// display the result
-console.log(newText);
+// take input from the user
+let string = prompt('Enter a string: ');
+
+let result = reverseString(string);
+console.log(result);
