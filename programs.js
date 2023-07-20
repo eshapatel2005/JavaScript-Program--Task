@@ -2,20 +2,12 @@
 
 
 
-// program to sort words in alphabetical order
+// program to replace a character of a string
 
-// take input
-let string = prompt('Enter a sentence: ');
+const string = 'Mr Red has a red house and a red car';
 
-// converting to an array
-let words = string.split(' ');
+// replace the characters
+const newText = string.replace('red', 'blue');
 
-// sort the array elements
-words.sort();
-
-// display the sorted words
-console.log('The sorted words are:');
-
-for (const element of words) {
-  console.log(element);
-}
+// display the result
+console.log(newText);
