@@ -3,24 +3,28 @@
 
 
 
-// program to create JavaScript object using object literal
-const person = { 
-    name: 'John',
-    age: 20,
-    hobbies: ['reading', 'games', 'coding'],
-    greet: function() {
-        console.log('Hello everyone.');
-    },
-    score: {
-        maths: 90,
-        science: 80
+// program to check the number of occurrence of a character
+
+function countString(str, letter) {
+    let count = 0;
+
+    // looping through the items
+    for (let i = 0; i < str.length; i++) {
+
+        // check if the character is at that position
+        if (str.charAt(i) == letter) {
+            count += 1;
+        }
     }
-};
+    return count;
+}
 
-console.log(typeof person); // object
+// take input from the user
+let string = prompt('Enter a string: ');
+let letterToCheck = prompt('Enter a letter to check: ');
 
-// accessing the object value
-console.log(person.name);
-console.log(person.hobbies[0]);
-person.greet();
-console.log(person.score.maths);
+//passing parameters and calling the function
+let result = countString(string, letterToCheck);
+
+// displaying the result
+console.log(result);
