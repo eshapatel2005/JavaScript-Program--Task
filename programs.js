@@ -2,20 +2,25 @@
 
 
 
-// program to reverse a string
 
-function reverseString(str) {
-
-    // empty string
-    let newString = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-        newString += str[i];
+// program to create JavaScript object using object literal
+const person = { 
+    name: 'John',
+    age: 20,
+    hobbies: ['reading', 'games', 'coding'],
+    greet: function() {
+        console.log('Hello everyone.');
+    },
+    score: {
+        maths: 90,
+        science: 80
     }
-    return newString;
-}
+};
 
-// take input from the user
-let string = prompt('Enter a string: ');
+console.log(typeof person); // object
 
-let result = reverseString(string);
-console.log(result);
+// accessing the object value
+console.log(person.name);
+console.log(person.hobbies[0]);
+person.greet();
+console.log(person.score.maths);
