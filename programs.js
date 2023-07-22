@@ -3,28 +3,11 @@
 
 
 
-// program to check the number of occurrence of a character
+let num1 = 5;
+let num2 = 3;
 
-function countString(str, letter) {
-    let count = 0;
+// add two numbers
+let sum = num1 + num2;
 
-    // looping through the items
-    for (let i = 0; i < str.length; i++) {
-
-        // check if the character is at that position
-        if (str.charAt(i) == letter) {
-            count += 1;
-        }
-    }
-    return count;
-}
-
-// take input from the user
-let string = prompt('Enter a string: ');
-let letterToCheck = prompt('Enter a letter to check: ');
-
-//passing parameters and calling the function
-let result = countString(string, letterToCheck);
-
-// displaying the result
-console.log(result);
+// display the sum
+console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
