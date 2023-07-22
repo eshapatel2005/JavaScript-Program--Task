@@ -3,18 +3,20 @@
 
 
 
-// program to convert first letter of a string to uppercase
-function capitalizeFirstLetter(str) {
+ // program to count the number of vowels in a string
 
-    // converting first letter to uppercase
-    const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+function countVowel(str) { 
 
-    return capitalized;
+    // find the count of vowels
+    let count = str.match(/[aeiou]/gi).length;
+
+    // return number of vowels
+    return count;
 }
 
 // take input
 let string = prompt('Enter a string: ');
 
-let result = capitalizeFirstLetter(string);
+let result = countVowel(string);
 
 console.log(result);
