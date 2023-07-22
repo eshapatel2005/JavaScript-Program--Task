@@ -3,24 +3,26 @@
 
 
 
- // program to remove a property from an object
+ // program to check if a string starts with 'S' and ends with 'G'
 
-// creating an object
-let student = { 
-    name: 'Esha',
-    age: ,
-    hobbies: ['reading', 'games', 'coding'],
-    greet: function() {
-        console.log('Hello everyone.');
-    },
-    score: {
-        maths: 90,
-        science: 90
+function checkString(str) {
+
+    // check if the string starts with S and ends with G
+    if(str.startsWith('S') && str.endsWith('G')) {
+        console.log('The string starts with S and ends with G');
     }
-};
+    else if(str.startsWith('S')) {
+        console.log('The string starts with S but does not end with G');
+    }
+     else if(str.endsWith('G')) {
+        console.log('The string starts does not with S but end with G');
+    }
+    else {
+        console.log('The string does not start with S and does not end with G');
+    }
+}
 
-// deleting a property from an object
-delete student.greet;
-delete student['score'];
 
-console.log(student);
+// take input
+let string = prompt('Enter a string: ');
+checkString(string);
