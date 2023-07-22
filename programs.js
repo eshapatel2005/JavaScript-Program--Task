@@ -3,20 +3,24 @@
 
 
 
- // program to count the number of vowels in a string
+ // program to remove a property from an object
 
-function countVowel(str) { 
+// creating an object
+let student = { 
+    name: 'Esha',
+    age: ,
+    hobbies: ['reading', 'games', 'coding'],
+    greet: function() {
+        console.log('Hello everyone.');
+    },
+    score: {
+        maths: 90,
+        science: 80
+    }
+};
 
-    // find the count of vowels
-    let count = str.match(/[aeiou]/gi).length;
+// deleting a property from an object
+delete student.greet;
+delete student['score'];
 
-    // return number of vowels
-    return count;
-}
-
-// take input
-let string = prompt('Enter a string: ');
-
-let result = countVowel(string);
-
-console.log(result);
+console.log(student);
