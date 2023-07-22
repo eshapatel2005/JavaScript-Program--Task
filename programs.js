@@ -15,7 +15,7 @@ let student = {
     },
     score: {
         maths: 90,
-        science: 80
+        science: 90
     }
 };
 
