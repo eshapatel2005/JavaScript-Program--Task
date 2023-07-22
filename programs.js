@@ -3,11 +3,18 @@
 
 
 
-let num1 = 5;
-let num2 = 3;
+// program to convert first letter of a string to uppercase
+function capitalizeFirstLetter(str) {
 
-// add two numbers
-let sum = num1 + num2;
+    // converting first letter to uppercase
+    const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
 
-// display the sum
-console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
+    return capitalized;
+}
+
+// take input
+let string = prompt('Enter a string: ');
+
+let result = capitalizeFirstLetter(string);
+
+console.log(result);
