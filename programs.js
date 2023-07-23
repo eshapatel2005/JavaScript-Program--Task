@@ -3,20 +3,20 @@
 
 
 
- // program to check if a key exists
+ // program to loop through an object using for...in loop
 
-let person = {
-    id: 1,
+let student = { 
     name: 'Esha',
-    age: 19
-}
+    age: 20,
+    hobbies: ['reading', 'games', 'coding'],
+};
 
-// check if key exists
-let hasKey = 'name' in person;
+// using for...in
+for (let key in student) { 
+    let value;
 
-if(hasKey) {
-    console.log('The key exists.');
-}
-else {
-    console.log('The key does not exist.');
-}
+    // get the value
+    value = student[key];
+
+    console.log(key + " - " +  value); 
+} 
