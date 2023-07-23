@@ -3,26 +3,20 @@
 
 
 
- // program to check if a string starts with 'S' and ends with 'G'
+ // program to check if a key exists
 
-function checkString(str) {
-
-    // check if the string starts with S and ends with G
-    if(str.startsWith('S') && str.endsWith('G')) {
-        console.log('The string starts with S and ends with G');
-    }
-    else if(str.startsWith('S')) {
-        console.log('The string starts with S but does not end with G');
-    }
-     else if(str.endsWith('G')) {
-        console.log('The string starts does not with S but end with G');
-    }
-    else {
-        console.log('The string does not start with S and does not end with G');
-    }
+let person = {
+    id: 1,
+    name: 'Esha',
+    age: 19
 }
 
+// check if key exists
+let hasKey = 'name' in person;
 
-// take input
-let string = prompt('Enter a string: ');
-checkString(string);
+if(hasKey) {
+    console.log('The key exists.');
+}
+else {
+    console.log('The key does not exist.');
+}
