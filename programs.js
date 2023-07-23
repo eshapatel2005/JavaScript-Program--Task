@@ -3,20 +3,21 @@
 
 
 
- // program to merge property of two objects
+// program to count the number of keys/properties in an object
 
-// object 1
-let person = {
+let student = { 
     name: 'Esha',
-    age:19
+    age: 19,
+    hobbies: ['reading', 'games', 'coding'],
+};
+
+let count = 0;
+
+// loop through each key/value
+for(let key in student) {
+
+    // increase the count
+    ++count;
 }
 
-// object 2
-let student = {
-    gender: 'female'
-}
-
-// merge two objects
-let newObj = Object.assign(person, student);
-
-console.log(newObj);
+console.log(count);
