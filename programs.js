@@ -3,20 +3,20 @@
 
 
 
- // program to loop through an object using for...in loop
+ // program to merge property of two objects
 
-let student = { 
+// object 1
+let person = {
     name: 'Esha',
-    age: 20,
-    hobbies: ['reading', 'games', 'coding'],
-};
+    age:19
+}
 
-// using for...in
-for (let key in student) { 
-    let value;
+// object 2
+let student = {
+    gender: 'female'
+}
 
-    // get the value
-    value = student[key];
+// merge two objects
+let newObj = Object.assign(person, student);
 
-    console.log(key + " - " +  value); 
-} 
+console.log(newObj);
