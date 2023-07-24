@@ -2,15 +2,11 @@
 
 
 
-// program to add a key/value pair to an object
+// program to create a multiline strings
 
-let person = {
-    name: 'Esha',
-    age: 19,
-    gender: 'female'
-}
+// using the + operator
+let message = 'This is a long message\n' + 
+    'that spans across multiple lines\n' + 
+    'in the code.'
 
-// add a key/value pair
-person.height = 5.4;
-
-console.log(person);
+console.log(message);
