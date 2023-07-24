@@ -2,22 +2,15 @@
 
 
 
+// program to add a key/value pair to an object
 
-// program to count the number of keys/properties in an object
-
-let student = { 
+let person = {
     name: 'Esha',
     age: 19,
-    hobbies: ['reading', 'games', 'coding'],
-};
-
-let count = 0;
-
-// loop through each key/value
-for(let key in student) {
-
-    // increase the count
-    ++count;
+    gender: 'female'
 }
 
-console.log(count);
+// add a key/value pair
+person.height = 5.4;
+
+console.log(person);
