@@ -2,11 +2,10 @@
 
 
 
-// program to create a multiline strings
+// program to format numbers as currency string
+let formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+});
 
-// using the + operator
-let message = 'This is a long message\n' + 
-    'that spans across multiple lines\n' + 
-    'in the code.'
-
-console.log(message);
+formatter.format(2500);
