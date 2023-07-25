@@ -2,15 +2,10 @@
 
 
 
-// program to check if a string starts with another string
+// program to trim a string
 
-let string = 'hello world';
+let string = '      Hello World       ';
 
-let toCheckString = 'he';
+let result = string.trim();
 
-if(string.startsWith(toCheckString)) {
-    console.warn('The string starts with "he".');
-}
-else {
-    console.warn(`The string does not starts with "he".`);
-}
+console.log(result);
