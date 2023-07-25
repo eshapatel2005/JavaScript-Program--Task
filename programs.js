@@ -2,19 +2,15 @@
 
 
 
-// program to generate random strings
+// program to check if a string starts with another string
 
-// declare all characters
-let characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+let string = 'hello world';
 
-function generateString(length) {
-    let result = ' ';
-    const charactersLength = characters.length;
-    for ( let i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
+let toCheckString = 'he';
 
-    return result;
+if(string.startsWith(toCheckString)) {
+    console.warn('The string starts with "he".');
 }
-
-console.log(generateString(5));
+else {
+    console.warn(`The string does not starts with "he".`);
+}
