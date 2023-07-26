@@ -2,18 +2,18 @@
 
 
 
-// program to display the date and time
-// get date and time
-let date = new Date(2017, 2, 12, 9, 25, 30);
+// program to check leap year
+function checkLeapYear(year) {
 
-// get the date as a string
-let n = date.toDateString();
+    //three conditions to find out the leap year
+    if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+        console.log(year + ' is a leap year');
+    } else {
+        console.log(year + ' is not a leap year');
+    }
+}
 
-// get the time as a string
-let time = date.toLocaleTimeString();
+// take input
+let year = prompt('Enter a year:');
 
-// display date
-console.log('Date: ' + n);
-
-// display time
-console.log('Time: ' + time);
+checkLeapYear(year);
