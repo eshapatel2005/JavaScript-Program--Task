@@ -2,18 +2,39 @@
 
 
 
-// program to check leap year
-function checkLeapYear(year) {
+// program to format the date
+// get current  date
+let currentDate = new Date();
 
-    //three conditions to find out the leap year
-    if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
-        console.log(year + ' is a leap year');
-    } else {
-        console.log(year + ' is not a leap year');
-    }
+// get the day from the date
+let day = currentDate.getDate();
+
+// get the month from the date
+// + 1 because month starts from 0
+let month = currentDate.getMonth() + 1;
+
+// get the year from the date
+let year = currentDate.getFullYear();
+
+// if day is less than 10, add 0 to make consistent format
+if (day < 10) {
+    day = '0' + day;
 }
 
-// take input
-let year = prompt('Enter a year:');
+// if month is less than 10, add 0
+if (month < 10) {
+    month = '0' + month;
+}
 
-checkLeapYear(year);
+// display in various formats
+let formattedDate1 = month + '/' + day + '/' + year;
+console.log(formattedDate1);
+
+let formattedDate2 = month + '-' + day + '-' + year;
+console.log(formattedDate2);
+
+let formattedDate3 = day + '-' + month + '-' + year;
+console.log(formattedDate3);
+
+let formattedDate4 = day + '/' + month + '/' + year;
+console.log(formattedDate4);
