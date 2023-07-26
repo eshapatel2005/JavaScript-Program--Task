@@ -2,16 +2,10 @@
 
 
 
-// js program to perform string comparison
+// program to replace all instances of a character in a string
 
-let string1 = 'JavaScript Program';
-let string2 = 'javascript program';
+let string = 'Learning JavaScript Program';
 
-// compare both strings
-let result = string1.toUpperCase() === string2.toUpperCase();
+let result = string.replace(/a/g, "A");
 
-if(result) {
-    console.log('The strings are similar.');
-} else {
-    console.log('The strings are not similar.');
-}
+console.log(result);
