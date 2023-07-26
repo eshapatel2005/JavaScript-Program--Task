@@ -2,10 +2,11 @@
 
 
 
-// program to replace all instances of a character in a string
+// program to replace all line breaks in a string with <br>
+let string = `I am Learning JavaScript.
+JavaScript is fun.
+JavaScript is easy.`;
 
-let string = 'Learning JavaScript Program';
-
-let result = string.replace(/a/g, "A");
+const result = string.replace(/(\r\n|\r|\n)/g, '<br>');
 
 console.log(result);
