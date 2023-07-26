@@ -2,11 +2,18 @@
 
 
 
-// program to replace all line breaks in a string with <br>
-let string = `I am Learning JavaScript.
-JavaScript is fun.
-JavaScript is easy.`;
+// program to display the date and time
+// get date and time
+let date = new Date(2017, 2, 12, 9, 25, 30);
 
-const result = string.replace(/(\r\n|\r|\n)/g, '<br>');
+// get the date as a string
+let n = date.toDateString();
 
-console.log(result);
+// get the time as a string
+let time = date.toLocaleTimeString();
+
+// display date
+console.log('Date: ' + n);
+
+// display time
+console.log('Time: ' + time);
