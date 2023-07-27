@@ -2,26 +2,19 @@
 
 
 
-// program to compare value of two dates
-// create two dates
-let d1 = new Date();
-let d2 = new Date();
+// program to remove item from an array
 
-// comparisons
-let compare1 = d1 < d2;
-console.log(compare1);
+function removeItemFromArray(array, n) {
+    let newArray = [];
 
-let compare2 = d1 > d2;
-console.log(compare2);
+    for ( let i = 0; i < array.length; i++) {
+        if(array[i] !== n) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
 
-let compare3 = d1 <= d2;
-console.log(compare3);
+let result = removeItemFromArray([1, 2, 3 , 4 , 5], 2);
 
-let compare4 = d1 >= d2;
-console.log(compare4);
-
-let compare5 = d1.getTime() === d2.getTime();
-console.log(compare5);
-
-let compare6 = d1.getTime() !== d2.getTime();
-console.log(compare6);
+console.log(result);
