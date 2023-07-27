@@ -2,18 +2,26 @@
 
 
 
-// program to display the date
-// get local machine date time
-let date = new Date();
+// program to compare value of two dates
+// create two dates
+let d1 = new Date();
+let d2 = new Date();
 
-// get the date as a string
-let n = date.toDateString();
+// comparisons
+let compare1 = d1 < d2;
+console.log(compare1);
 
-// get the time as a string
-let time = date.toLocaleTimeString();
+let compare2 = d1 > d2;
+console.log(compare2);
 
-// display date
-console.log('Date: ' + n);
+let compare3 = d1 <= d2;
+console.log(compare3);
 
-// display time
-console.log('Time: ' + time);
+let compare4 = d1 >= d2;
+console.log(compare4);
+
+let compare5 = d1.getTime() === d2.getTime();
+console.log(compare5);
+
+let compare6 = d1.getTime() !== d2.getTime();
+console.log(compare6);
