@@ -2,39 +2,18 @@
 
 
 
-// program to format the date
-// get current  date
-let currentDate = new Date();
+// program to display the date
+// get local machine date time
+let date = new Date();
 
-// get the day from the date
-let day = currentDate.getDate();
+// get the date as a string
+let n = date.toDateString();
 
-// get the month from the date
-// + 1 because month starts from 0
-let month = currentDate.getMonth() + 1;
+// get the time as a string
+let time = date.toLocaleTimeString();
 
-// get the year from the date
-let year = currentDate.getFullYear();
+// display date
+console.log('Date: ' + n);
 
-// if day is less than 10, add 0 to make consistent format
-if (day < 10) {
-    day = '0' + day;
-}
-
-// if month is less than 10, add 0
-if (month < 10) {
-    month = '0' + month;
-}
-
-// display in various formats
-let formattedDate1 = month + '/' + day + '/' + year;
-console.log(formattedDate1);
-
-let formattedDate2 = month + '-' + day + '-' + year;
-console.log(formattedDate2);
-
-let formattedDate3 = day + '-' + month + '-' + year;
-console.log(formattedDate3);
-
-let formattedDate4 = day + '/' + month + '/' + year;
-console.log(formattedDate4);
+// display time
+console.log('Time: ' + time);
