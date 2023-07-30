@@ -2,15 +2,19 @@
 
 
 
-// program to check if an array contains a specified value
+// program to insert an item at a specific index into an array
 
-let array = ['you', 'will', 'learn', 'javascript'];
+function insertElement() {
+    let array = [1, 2, 3, 4, 5];
 
-let hasValue = array.includes('javascript');
+    // index to add to
+    let index = 3;
 
-// check the condition
-if(hasValue) {
-    console.log('Array contains a value.');
-} else {
-    console.log('Array does not contain a value.');
+    // element that you want to add
+    let element = 8;
+  
+    array.splice(index, 0, element);
+    console.log(array);
 }
+
+insertElement();
