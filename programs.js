@@ -2,19 +2,21 @@
 
 
 
-// program to insert an item at a specific index into an array
+// program to append an object to an array
 
-function insertElement() {
-    let array = [1, 2, 3, 4, 5];
+function insertObject(arr, obj) {
 
-    // index to add to
-    let index = 3;
-
-    // element that you want to add
-    let element = 8;
-  
-    array.splice(index, 0, element);
-    console.log(array);
+    // append object
+    arr.push(obj);
+    
+    console.log(arr);
 }
 
-insertElement();
+// original array
+let array = [1, 2, 3];
+
+// object to add
+let object = {x: 12, y: 8};
+
+// call the function
+insertObject(array, object);
