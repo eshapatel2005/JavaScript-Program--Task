@@ -2,19 +2,15 @@
 
 
 
-// program to remove item from an array
+// program to check if an array contains a specified value
 
-function removeItemFromArray(array, n) {
-    let newArray = [];
+let array = ['you', 'will', 'learn', 'javascript'];
 
-    for ( let i = 0; i < array.length; i++) {
-        if(array[i] !== n) {
-            newArray.push(array[i]);
-        }
-    }
-    return newArray;
+let hasValue = array.includes('javascript');
+
+// check the condition
+if(hasValue) {
+    console.log('Array contains a value.');
+} else {
+    console.log('Array does not contain a value.');
 }
-
-let result = removeItemFromArray([1, 2, 3 , 4 , 5], 2);
-
-console.log(result);
