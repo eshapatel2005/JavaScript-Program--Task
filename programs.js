@@ -1,24 +1,17 @@
 
+// program to empty an array
 
+function emptyArray(arr) {
 
-
-// program to check if an object is an array
-
-function checkObject(arr) {
-
-    // check if arr is array
-    const result = Array.isArray(arr);
-
-    if(result) {
-        console.log(`[${arr}] is an array.`);
-    }
-    else {
-        console.log(`${arr} is not an array.`);
-    }
-
+    // substituting new array
+    arr = [];
+    
+    return arr;
 }
 
-let array = [1, 2, 3];
+let array = [1, 2 ,3];
+console.log(array);
 
 // call the function
-checkObject(array);
+let result = emptyArray(array);
+console.log(result);
