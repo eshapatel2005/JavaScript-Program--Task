@@ -1,17 +1,16 @@
 
-// program to empty an array
+// program to add element to an array
 
-function emptyArray(arr) {
+function addElement(arr) {
 
-    // substituting new array
-    arr = [];
+    // adding new array element
+    arr.unshift(4);
     
-    return arr;
+    console.log(arr);
 }
 
-let array = [1, 2 ,3];
-console.log(array);
+let array = [1, 2, 3];
 
-// call the function
-let result = emptyArray(array);
-console.log(result);
+// calling the function
+// passing array argument
+addElement(array);
