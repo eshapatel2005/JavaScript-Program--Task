@@ -3,26 +3,24 @@
 
 
 
-// program to merge and remove duplicate value from an array
+// program to sort array by property name
 
-function getUniqueAfterMerge(arr1, arr2){
+function compareName(a, b) {
 
-    // merge two arrays
-    let arr = arr1.concat(arr2);
-    let uniqueArr = [];
+    // converting to uppercase to have case-insensitive comparison
+    let name1 = a.name.toUpperCase();
+    let name2 = b.name.toUpperCase();
 
-    // loop through array
-    for(let i of arr) {
-        if(uniqueArr.indexOf(i) === -1) {
-            uniqueArr.push(i);
-        }
+    let comparison = 0;
+
+    if (name1 > name2) {
+        comparison = 1;
+    } else if (name1 < name2) {
+        comparison = -1;
     }
-    console.log(uniqueArr);
+    return comparison;
 }
 
-let array1 = [1, 2, 3];
-let array2 = [2, 3, 5]
+let students = [{name: 'Sara', age:24},{name: 'John', age:24}, {name: 'Jack', age:25}];
 
-// calling the function
-// passing array argument
-getUniqueAfterMerge(array1, array2);
+console.log(students.sort(compareName));
