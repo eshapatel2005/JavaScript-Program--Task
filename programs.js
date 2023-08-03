@@ -3,24 +3,29 @@
 
 
 
-// program to sort array by property name
+// program to create a two dimensional array
 
-function compareName(a, b) {
+function twoDimensionArray(a, b) {
+    let arr = [];
 
-    // converting to uppercase to have case-insensitive comparison
-    let name1 = a.name.toUpperCase();
-    let name2 = b.name.toUpperCase();
-
-    let comparison = 0;
-
-    if (name1 > name2) {
-        comparison = 1;
-    } else if (name1 < name2) {
-        comparison = -1;
+    // creating two dimensional array
+    for (let i = 0; i< a; i++) {
+        for(let j = 0; j< b; j++) {
+            arr[i] = [];
+        }
     }
-    return comparison;
+
+    // inserting elements to array
+    for (let i = 0; i< a; i++) {
+        for(let j = 0; j< b; j++) {
+            arr[i][j] = j;
+        }
+    }
+    return arr;
 }
 
-let students = [{name: 'Sara', age:24},{name: 'John', age:24}, {name: 'Jack', age:25}];
+let x = 2;
+let y = 3;
 
-console.log(students.sort(compareName));
+let result = twoDimensionArray(x, y);
+console.log(result);
