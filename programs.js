@@ -1,21 +1,12 @@
 
 
 
-// program to check if a variable is undefined or null
+// input from the user
+let min = parseInt(prompt("Enter a min value: "));
+let max = parseInt(prompt("Enter a max value: "));
 
-function checkVariable(variable) {
+// generating a random number
+let a = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    if(variable == null) {
-        console.log('The variable is undefined or null');
-    }
-    else {
-       console.log('The variable is neither undefined nor null');
-    }
-}
-
-let newVariable;
-
-checkVariable(5);
-checkVariable('hello');
-checkVariable(null);
-checkVariable(newVariable);
+// display a random number
+console.log(`Random value between ${min} and ${max} is ${a}`);
