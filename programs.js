@@ -3,31 +3,19 @@
 
 
 
-// program to perform intersection between two arrays using Set
-// intersection contains the elements of array1 that are also in array2
+// program to split array into smaller chunks
 
-function performIntersection(arr1, arr3) {
+function splitIntoChunk(arr, chunk) {
 
-    // converting into Set
-    let setA = new Set(arr1);
-    let setB = new Set(arr3);
+    for (i=0; i < arr.length; i += chunk) {
 
-    let intersectionResult = [];
-
-    for (let i of setB) {
-    
-        if (setA.has(i)) {
-            intersectionResult.push(i);
-        }
-        
+        let tempArray;
+        tempArray = arr.slice(i, i + chunk);
+        console.log(tempArray);
     }
-    
-    return intersectionResult;
 
 }
 
-let array1 = [1, 2, 3, 5, 9];
-let array2 = [1, 3, 5, 8];
-
-let result = performIntersection(array1, array3);
-console.log(result);
+let array = [1, 2, 3, 4, 5, 6, 7, 8];
+let chunk = 2;
+splitIntoChunk(array, chunk);
