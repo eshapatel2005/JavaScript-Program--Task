@@ -1,12 +1,18 @@
 
 
 
-// input from the user
-let min = parseInt(prompt("Enter a min value: "));
-let max = parseInt(prompt("Enter a max value: "));
+// program to validate an email address
 
-// generating a random number
-let a = Math.floor(Math.random() * (max - min + 1)) + min;
+function validateEmail(email_id) {
+    let regex_pattern =      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (regex_pattern.test(email_id)) {
+        console.log('The email address is valid');
+    }
+    else {
+        console.log('The email address is not valid');
+    }
+}
 
-// display a random number
-console.log(`Random value between ${min} and ${max} is ${a}`);
+validateEmail('abc123@gmail.com');
+validateEmail('hello@com');
