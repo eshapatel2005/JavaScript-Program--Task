@@ -1,18 +1,22 @@
 
 
 
-// program to validate an email address
+// program to check if a variable is of function type
 
-function validateEmail(email_id) {
-    let regex_pattern =      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    if (regex_pattern.test(email_id)) {
-        console.log('The email address is valid');
+function testVariable(variable) {
+      
+    if(variable instanceof Function) {
+        console.log('The variable is of function type');
     }
     else {
-        console.log('The email address is not valid');
+        console.log('The variable is not of function type');
     }
 }
 
-validateEmail('abc123@gmail.com');
-validateEmail('hello@com');
+let count = true;
+let x = function() {
+    console.log('HELLO')
+};
+
+testVariable(count);
+testVariable(x);
