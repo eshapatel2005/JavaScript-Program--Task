@@ -1,22 +1,28 @@
 
 
+// program to include constants
 
-// program to check if a variable is of function type
+let a = 5;
+console.log(a);
 
-function testVariable(variable) {
-      
-    if(variable instanceof Function) {
-        console.log('The variable is of function type');
-    }
-    else {
-        console.log('The variable is not of function type');
-    }
+// constants are block-scoped
+{
+    let a = 50;
+    console.log(a);
 }
+console.log(a);
 
-let count = true;
-let x = function() {
-    console.log('HELLO')
-};
+let arr = ['work', 'exercise', 'eat'];
+console.log(arr);
 
-testVariable(count);
-testVariable(x);
+// add elements to arr array
+arr[3] = 'hello';
+console.log(arr);
+
+// the following code gives error
+// changing the value of a throws an error
+// uncomment to verify
+// a = 8;
+
+// throws an error
+// const x; 
