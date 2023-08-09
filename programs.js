@@ -3,22 +3,10 @@
 
 
 
-// program to pass a function as a parameter
+// program to trim a string
 
-function greet() {
-    return 'Hello';
-}
+let string = '      Hello World       ';
 
-// passing function greet() as a parameter
-function name(user, func)
-{
+let result = string.split(' ').join('');
 
-    // accessing passed function
-    const message = func();
-
-    console.log(`${message} ${user}`);
-}
-
-name('John', greet);
-name('Jack', greet);
-name('Sara', greet);
+console.log(result);
