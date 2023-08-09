@@ -3,33 +3,28 @@
 
 
 
-// program to perform function overloading
+// program to check if a number is a float or integer value
 
-function sum() {  
+function checkNumber(x) {
+
+    // check if the passed value is a number
+    if(typeof x == 'number' && !isNaN(x)){
     
-    // if no argument        
-    if (arguments.length == 0) {  
-        console.log('You have not passed any argument');  
-    }
-
-    // if only one argument 
-    else if (arguments.length == 1) {  
-        console.log('Pass at least two arguments');  
-    }
-
-    // multiple arguments
-    else {
-        let result = 0;
-        let length = arguments.length;
+        // check if it is integer
+        if (Number.isInteger(x)) {
+            console.log(`${x} is integer.`);
+        }
+        else {
+            console.log(`${x} is a float value.`);
+        }
     
-        for (i = 0; i < length; i++) {  
-            result = result + arguments[i];  
-        }  
-        console.log(result); 
-    }  
+    } else {
+        console.log(`${x} is not a number`);
+    }
 }
 
-sum();
-sum(5); 
-sum(5, 9);    
-sum(1, 2, 3, 4, 5, 6, 7, 8, 9); 
+checkNumber('hello');
+checkNumber(44);
+checkNumber(3.4);
+checkNumber(-3.4);
+checkNumber(NaN);
