@@ -2,11 +2,15 @@
 
 
 
-// program to convert date to number
-// create date
-let d1 = new Date();
-console.log(d1);
+// program to get the dimensions of an image
 
-// converting to number
-let result = d1.getTime();
-console.log(result);
+let img = new Image();
+
+// get the image
+img.src = 'https://www.binaryit.com.au/wp-content/uploads/2018/01/best-laptop-for-students.jpg';
+
+// get height and width
+img.onload = function() {
+  console.log('width ' + this.width)
+  console.log('height '+ this.height);
+}
