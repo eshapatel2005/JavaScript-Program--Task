@@ -3,7 +3,7 @@
 
 
 
-letstr = "uppercase";
+let str = "uppercase";
 
 let upperCaseStr = str.toUpperCase();
 
