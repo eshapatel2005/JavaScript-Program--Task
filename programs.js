@@ -3,7 +3,8 @@
 
 
 
+letstr = "uppercase";
 
-let str = "UPPER Case";
-let lowerCaseStr = str.toLowerCase();
-console.log(lowerCaseStr);
+let upperCaseStr = str.toUpperCase();
+
+console.log(upperCaseStr);
