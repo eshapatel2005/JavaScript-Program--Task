@@ -3,6 +3,8 @@
 
 
 
-let text1 = "What a very ";
-text1 += "nice day";
-document.getElementById("demo").innerHTML = text1;
+// computes 52
+let power = Math.pow(5, 2);
+console.log(power); 
+
+// Output:  25
