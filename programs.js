@@ -3,8 +3,16 @@
 
 
 
-// computes 52
-let power = Math.pow(5, 2);
-console.log(power); 
+// Javascript program to convert centimeter into meter
 
-// Output:  25
+let cm, meter;
+cm = 1000;
+ 
+// Converting centimeter into meter
+
+meter = cm / 100.0;
+
+ 
+document.write("Length in meter = " +
+               meter + "m" + "</br>");
+ 
