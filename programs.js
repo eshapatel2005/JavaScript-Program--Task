@@ -3,16 +3,11 @@
 
 
 
-// Javascript program to convert centimeter into meter
-
-let cm, meter;
-cm = 1000;
- 
-// Converting centimeter into meter
-
-meter = cm / 100.0;
-
- 
-document.write("Length in meter = " +
-               meter + "m" + "</br>");
- 
+let num=1234, rem, sum=0;
+  while(num)
+  {
+    rem = num%10;
+    sum = sum+rem;
+    num = Math.floor(num/10);
+  }
+  document.write(sum);
