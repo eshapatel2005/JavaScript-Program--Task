@@ -3,11 +3,15 @@
 
 
 
-let num=1234, rem, sum=0;
-  while(num)
-  {
-    rem = num%10;
-    sum = sum+rem;
-    num = Math.floor(num/10);
+function validate(age){
+  var ans="not eigible";
+  if(age>=18){
+      ans="eligible";
   }
-  document.write(sum);
+  return(ans);
+}
+
+
+let age=parseInt(prompt("Enter age"));
+let status=validate(age);
+document.write("You are <b>"+status+"</b> for Vote");
