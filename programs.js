@@ -3,15 +3,13 @@
 
 
 
-function validate(age){
-  var ans="not eigible";
-  if(age>=18){
-      ans="eligible";
-  }
-  return(ans);
+var array = [3 , 6, 2, 56, 32, 5, 89, 32];
+var largest= 0;
+
+for (i=0; i<=largest;i++){
+    if (array>largest) {
+        var largest=array[i];
+    }
 }
 
-
-let age=parseInt(prompt("Enter age"));
-let status=validate(age);
-document.write("You are <b>"+status+"</b> for Vote");
+console.log(largest);
