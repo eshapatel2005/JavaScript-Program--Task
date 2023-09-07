@@ -1,15 +1,11 @@
 
 
+let baseValue = prompt('Enter the base of a triangle: ');
+let heightValue = prompt('Enter the height of a triangle: ');
 
+// calculate the area
+let areaValue = (baseValue * heightValue) / 2;
 
-
-let array = [3 , 6, 2, 56, 32, 5, 89, 32];
-let largest= 0;
-
-for (i=0; i<=largest;i++){
-    if (array>largest) {
-        let largest=array[i];
-    }
-}
-
-console.log(largest);
+console.log(
+  `The area of the triangle is ${areaValue}`
+);
