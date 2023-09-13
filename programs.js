@@ -1,10 +1,12 @@
 
 
-let num1 = 5;
-let num2 = 3;
+// taking kilometers input from the user
+let kilometers = prompt("Enter value in kilometers: ")
 
-// add two numbers
-let sum = num1 + num2;
+// conversion factor
+let factor = 0.621371
 
-// display the sum
-console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
+// calculate miles
+let miles = kilometers * factor
+
+console.log(`${kilometers} kilometers is equal to ${miles} miles.`);
