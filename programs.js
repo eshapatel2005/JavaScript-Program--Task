@@ -1,12 +1,16 @@
 
 
-// taking kilometers input from the user
-let kilometers = prompt("Enter value in kilometers: ")
+// program to generate fibonacci series up to n terms
 
-// conversion factor
-let factor = 0.621371
+// take input from the user
+let number = parseInt(prompt('Enter the number of terms: '));
+let n1 = 0, n2 = 1, nextTerm;
 
-// calculate miles
-let miles = kilometers * factor
+console.log('Fibonacci Series:');
 
-console.log(`${kilometers} kilometers is equal to ${miles} miles.`);
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
