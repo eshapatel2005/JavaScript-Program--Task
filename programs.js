@@ -1,16 +1,24 @@
 
 
-// program to generate fibonacci series up to n terms
 
-// take input from the user
-let number = parseInt(prompt('Enter the number of terms: '));
-let n1 = 0, n2 = 1, nextTerm;
 
-console.log('Fibonacci Series:');
+/* program to check whether the last digit of three
+numbers is same */
 
-for (let i = 1; i <= number; i++) {
-    console.log(n1);
-    nextTerm = n1 + n2;
-    n1 = n2;
-    n2 = nextTerm;
+// take input
+let a = prompt('Enter a first integer: ');
+let b = prompt('Enter a second integer: ');
+let c = prompt('Enter a third integer: ');
+
+// find the last digit
+let result1 = a % 10;
+let result2 = b % 10;
+let result3 = c % 10;
+
+// compare the last digits
+if(result1 == result2 && result1 == result3) {
+    console.log(`${a}, ${b} and ${c} have the same last digit.`);
+}
+else {
+    console.log(`${a}, ${b} and ${c} have different last digit.`);
 }
