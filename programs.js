@@ -2,23 +2,18 @@
 
 
 
-/* program to check whether the last digit of three
-numbers is same */
+// program to find the factors of an integer
 
 // take input
-let a = prompt('Enter a first integer: ');
-let b = prompt('Enter a second integer: ');
-let c = prompt('Enter a third integer: ');
+let num = prompt('Enter a positive number: ');
 
-// find the last digit
-let result1 = a % 10;
-let result2 = b % 10;
-let result3 = c % 10;
+console.log(`The factors of ${num} is:`);
 
-// compare the last digits
-if(result1 == result2 && result1 == result3) {
-    console.log(`${a}, ${b} and ${c} have the same last digit.`);
-}
-else {
-    console.log(`${a}, ${b} and ${c} have different last digit.`);
+// looping through 1 to num
+for(let i = 1; i <= num; i++) {
+
+    // check if number is a factor
+    if(num % i == 0) {
+        console.log(i);
+    }
 }
