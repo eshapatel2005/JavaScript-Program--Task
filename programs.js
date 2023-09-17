@@ -2,18 +2,11 @@
 
 
 
-// program to find the factors of an integer
+// program to create a multiline strings
 
-// take input
-let num = prompt('Enter a positive number: ');
+// using the + operator
+let message = 'This is a long message\n' + 
+    'that spans across multiple lines\n' + 
+    'in the code.'
 
-console.log(`The factors of ${num} is:`);
-
-// looping through 1 to num
-for(let i = 1; i <= num; i++) {
-
-    // check if number is a factor
-    if(num % i == 0) {
-        console.log(i);
-    }
-}
+console.log(message);
