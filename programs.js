@@ -2,11 +2,18 @@
 
 
 
-// program to create a multiline strings
+// program to display the date and time
+// get date and time
+let date = new Date(2017, 2, 12, 9, 25, 30);
 
-// using the + operator
-let message = 'This is a long message\n' + 
-    'that spans across multiple lines\n' + 
-    'in the code.'
+// get the date as a string
+let n = date.toDateString();
 
-console.log(message);
+// get the time as a string
+let time = date.toLocaleTimeString();
+
+// display date
+console.log('Date: ' + n);
+
+// display time
+console.log('Time: ' + time);
