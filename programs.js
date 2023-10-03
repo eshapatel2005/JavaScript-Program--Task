@@ -2,18 +2,18 @@
 
 
 
-// program to display the date and time
-// get date and time
-let date = new Date(2017, 2, 12, 9, 25, 30);
+// program to validate an email address
 
-// get the date as a string
-let n = date.toDateString();
+function validateEmail(email_id) {
+    let regex_pattern =      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (regex_pattern.test(email_id)) {
+        console.log('The email address is valid');
+    }
+    else {
+        console.log('The email address is not valid');
+    }
+}
 
-// get the time as a string
-let time = date.toLocaleTimeString();
-
-// display date
-console.log('Date: ' + n);
-
-// display time
-console.log('Time: ' + time);
+validateEmail('abc123@gmail.com');
+validateEmail('hello@com');
