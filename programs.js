@@ -2,18 +2,26 @@
 
 
 
-// program to validate an email address
+// program to check an Armstrong number of three digits
 
-function validateEmail(email_id) {
-    let regex_pattern =      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    if (regex_pattern.test(email_id)) {
-        console.log('The email address is valid');
-    }
-    else {
-        console.log('The email address is not valid');
-    }
+let sum = 0;
+let number = prompt('Enter a three-digit positive integer: ');
+
+// create a temporary variable
+let temp = number;
+while (temp > 0) {
+    // finding the one's digit
+    let remainder = temp % 10;
+
+    sum += remainder * remainder * remainder;
+
+    // removing last digit from the number
+    temp = parseInt(temp / 10); // convert float into integer
 }
-
-validateEmail('abc123@gmail.com');
-validateEmail('hello@com');
+// check the condition
+if (sum == number) {
+    console.log(`${number} is an Armstrong number`);
+}
+else {
+    console.log(`${number} is not an Armstrong number.`);
+}
