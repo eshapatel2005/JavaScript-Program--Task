@@ -2,26 +2,20 @@
 
 
 
-// program to check an Armstrong number of three digits
+// program to find the LCM of two integers
 
-let sum = 0;
-let number = prompt('Enter a three-digit positive integer: ');
+// take input
+let num1 = prompt('Enter a first positive integer: ');
+let num2 = prompt('Enter a second positive integer: ');
 
-// create a temporary variable
-let temp = number;
-while (temp > 0) {
-    // finding the one's digit
-    let remainder = temp % 10;
+// higher number among number1 and number2 is stored in min
+let min = (num1 > num2) ? num1 : num2;
 
-    sum += remainder * remainder * remainder;
-
-    // removing last digit from the number
-    temp = parseInt(temp / 10); // convert float into integer
-}
-// check the condition
-if (sum == number) {
-    console.log(`${number} is an Armstrong number`);
-}
-else {
-    console.log(`${number} is not an Armstrong number.`);
+// while loop
+while (true) {
+    if (min % num1 == 0 && min % num2 == 0) {
+        console.log(`The LCM of ${num1} and ${num2} is ${min}`);
+        break;
+    }
+    min++;
 }
