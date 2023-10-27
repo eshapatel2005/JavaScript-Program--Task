@@ -5,8 +5,8 @@
 // program to find the LCM of two integers
 
 // take input
-let num1 = prompt('Enter a first positive integer: ');
-let num2 = prompt('Enter a second positive integer: ');
+let num1 = prompt('Enter a first positive integers: ');
+let num2 = prompt('Enter a second positive integers: ');
 
 // higher number among number1 and number2 is stored in min
 let min = (num1 > num2) ? num1 : num2;
