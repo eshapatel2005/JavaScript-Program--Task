@@ -2,20 +2,24 @@
 
 
 
-// program to find the LCM of two integers
+// program to find the largest among three numbers
 
-// take input
-let num1 = prompt('Enter a first positive integers: ');
-let num2 = prompt('Enter a second positive integers: ');
+// take input from the user
+let num1 = parseFloat(prompt("Enter first number: "));
+let num2 = parseFloat(prompt("Enter second number: "));
+let num3 = parseFloat(prompt("Enter third number: "));
+let largest;
 
-// higher number among number1 and number2 is stored in min
-let min = (num1 > num2) ? num1 : num2;
-
-// while loop
-while (true) {
-    if (min % num1 == 0 && min % num2 == 0) {
-        console.log(`The LCM of ${num1} and ${num2} is ${min}`);
-        break;
-    }
-    min++;
+// check the condition
+if(num1 >= num2 && num1 >= num3) {
+    largest = num1;
 }
+else if (num2 >= num1 && num2 >= num3) {
+    largest = num2;
+}
+else {
+    largest = num3;
+}
+
+// display the result
+console.log("The largest number is " + largest);
